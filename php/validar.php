@@ -9,7 +9,7 @@ $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 		}
 	$nombre = $_POST["usuario"];
 	$pass = $_POST["pass"];
-	$query = mysqli_query($conn,"SELECT * FROM usuario WHERE nombre= '".$nombre."' and contrasenia = '".$pass."'");
+	$query = mysqli_query($conn,"SELECT * FROM usuario WHERE correo= '".$nombre."' and pass1 = '".$pass."'");
 	$nr = mysqli_num_rows($query);
 		if($nr == 1)
 			{
@@ -19,5 +19,6 @@ $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 		else if ($nr == 0) 
 			{
 				echo "<script>alert('No tiene acceso') </script>";
+				header("Location: ../view/register.html");
 		}
 ?>
