@@ -17,17 +17,19 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-6">
+            <div class="col-6 fondo-abstracto">
                 <h2>¿Aun no tienes cuenta?</h2>
                 <p>Registrate para que puedas adquirir los mejores <br> productos de ibcorp 😎 </p>
-                <button type="submit" class="btn btn-warning">Registrarse</button>
-                <img src="./src/img/venta2.png" alt="imagen_venta">
+                <button  class="btn btn-warning"><a href="./view/register.php">Registrarse</a></button>
+                <div class="container">
+                    <img src="./src/img/venta2.png" alt="imagen_venta">
+                </div>
             </div>
             <div class="col-6">
                 <h1>Iniciar sesion</h1>
                 <form action="s">
-                    <input type="text" name="usuario" id="usuario" placeholder="Correo" autocomplete="email"><br><br>
-                    <input type="password" name="pass" id="pass" placeholder="Contraseña"><br><br>
+                    <input type="text" name="usuario" id="usuario" placeholder="Nombre completo" autocomplete="email"><br><br>
+                    <input type="password" name="pass" id="pass" placeholder="Correo electrónico"><br><br>
                     <button type="submit" class="btn btn-warning">Enviar</button>
                 </form>
             </div>
@@ -44,3 +46,4 @@
 </body>
 
 </html>
+

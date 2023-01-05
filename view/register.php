@@ -18,18 +18,36 @@
     <div class="container">
         <div class="row">
             <div class="col-6 fondo-abstracto">
-            <h1>Iniciar sesion</h1>
-                <form action="s">
-                    <input type="text" name="usuario" id="usuario" placeholder="Correo" autocomplete="email"><br><br>
-                    <input type="password" name="pass" id="pass" placeholder="Contraseña"><br><br>
-                    <button type="submit" class="btn btn-warning">Enviar</button>
+            <h2>Registrate</h2>
+                <form action="#">
+                <input type="text" name="usuario" id="usuario" placeholder="Nombre completo"
+                        autocomplete="email"><br><br>
+                    <input type="email" name="correo" id="correo" placeholder="Correo electrónico"><br><br>
+                    <input type="number" name="numerotelefonico" id="numerotelefonico"
+                        placeholder="Numero telefonico"><br><br>
+                    <input type="text" name="direccion" id="direccion" placeholder="Direccion completa"><br><br>
+                    <input type="text" name="name" id="name" placeholder="Nombre"><br><br>
+                    <input type="password" name="pass1" id="pass1" placeholder="Contraseña"><br><br>
+                    <!-- <input type="password" name="pass2" id="pass2" placeholder="Confirmar contraseña"><br><br> -->
+
+                    <div class="aceptar">
+                        <p><input type="checkbox" name="acepta" id="acepta"> Acepta nuestros <a>terminos</a> y
+                            <a>condiciones</a>
+                        </p><br>
+
+                    </div>
+                    <button type="submit">Registrarse</button>
                 </form>
             </div>
             <div class="col-6">
-            <h2>¿Aun no tienes cuenta?</h2>
-                <p>Registrate para que puedas adquirir los mejores <br> productos de ibcorp 😎 </p>
-                <button type="submit" class="btn btn-warning">Registrarse</button>
-                <img src="../src/img/registro.png" alt="imagen_venta">
+            <h1>¿Ya tienes cuenta?</h1>
+                <p>Inicia sesion para que puedas acceder a los mejores<br> productos y a los mejores precios de Ibcorp 😎 </p>
+                <button  class="btn btn-warning"><a href="../index.php">Iniciar sesion</a></button>
+
+                <div class="row">
+                    <img src="../src/img/registro.png" alt="imagen_venta">
+
+                </div>
             </div>
         </div>
     </div>
@@ -45,16 +63,3 @@
 
 </html>
 
-<?php
-error_reporting(0);
-  $nombre = $_POST['nombre'];
-  $apellido = $_POST['apellido'];
-  $correo = $_POST['correo'];
-  $telefono = $_POST['telefono'];
-  $asunto = $_POST['asunto'];
-  $mensaje = $_POST['mensaje'];
-  $Bs= mysqli_connect("sql208.epizy.com","epiz_27286277","lyIpa5rBea","epiz_27286277_contacto") or die("No se conecto a la base de datos");
-  $Bs -> set_charset("utf8");
-  $Inser = "INSERT INTO contacto(nombre,apellido,correo,telefono,asunto,mensaje) VALUES('$nombre', '$apellido','$correo','$telefono','$asunto','$mensaje')";
-  mysqli_query($Bs,$Inser);
-?>
