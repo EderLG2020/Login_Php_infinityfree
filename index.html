@@ -9,30 +9,34 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./src/style/login.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 </head>
 
 <body>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-6 fondo-abstracto">
-                <h2>¿Aun no tienes cuenta?</h2>
-                <p>Registrate para que puedas adquirir los mejores <br> productos de ibcorp 😎 </p>
-                <button class="btn btn-warning"><a href="./view/register.html">Registrarse</a></button>
-                <div class="container">
-                    <img src="./src/img/venta2.png" alt="imagen_venta">
+    <div class="fondo-abstracto">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-sm-12 col-md-6 align-self-center">
+                    <br>
+                    <h2> <b> ¿Aún no tienes cuenta?</b></h2>
+                    <p>Regístrate para que puedas adquirir los mejores <br> productos de ibcorp 😎 </p>
+                    <button class="btn btn-warning"><a href="./view/register.html">Registrarse</a></button>
+                    <br><br>
+                    <div class="container">
+                        <img src="./src/img/venta2.png" alt="imagen_venta">
+                    </div>
                 </div>
-            </div>
-            <div class="col-6">
-                <h1>Iniciar sesion</h1>
-                <form method="POST" action="./php/validar.php">
-                    <input type="text" name="usuario" id="usuario" placeholder="Nombre completo"
-                        autocomplete="email"><br><br>
-                    <input type="password" name="pass" id="pass" placeholder="Correo electrónico"><br><br>
-                    <button type="submit" class="btn btn-warning">Enviar</button>
-                </form>
+                <div class="col-sm-12 col-md-6 align-self-center">
+                    <h1> <b>INICIAR SESIÓN</b> </h1>
+                    <form method="POST" action="./php/validar.php">
+                        <input type="text" name="usuario" id="usuario" placeholder="&#128100;Correo electrónico"
+                            autocomplete="email"><br><br>
+                        <input type="password" name="pass" id="pass" placeholder="Contraseña"><br><br>
+                        <button type="submit" class="btn btn-warning text-light">Enviar</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

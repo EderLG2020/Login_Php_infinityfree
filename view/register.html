@@ -9,45 +9,51 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../src/style/login.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
 </head>
 
 <body>
+    <div class="fondo-abstracto">
+        <div class="container">
+            <div class="row">
+                <div class=" col-sm-12 col-md-6 align-self-center">
+                    <div class="fondo-abstracto"></div>
+                    <h2 class="fs-1 fw-semibold">Regístrate</h2>
+                    <form name="formularioR" method="POST" action="../php/registro.php">
+                        <input type="text" name="nameuser" id="usuario" placeholder="&#128100;Nombre completo"
+                            autocomplete="name"><br><br>
+                        <input type="email" name="correoe" id="correoe"
+                            placeholder="&#128100;Correo electrónico"><br><br>
+                        <input type="number" name="numerotelefonico" id="numerotelefonico"
+                            placeholder="&#128100;Numero telefonico"><br><br>
+                        <input type="text" name="direccion" id="direccion"
+                            placeholder="&#128100;Direccion completa"><br><br>
+                        <input type="text" name="apodo" id="apodo" placeholder="&#128100;Apodo"><br><br>
+                        <input type="password" name="pass1" id="pass1" placeholder="&#128100;Contraseña"><br><br>
+                        <!-- <input type="password" name="pass2" id="pass2" placeholder="Confirmar contraseña"><br><br> -->
 
-    <div class="container">
-        <div class="row">
-            <div class="col-6 fondo-abstracto">
-                <h2>Registrate</h2>
-                <form name="formularioR" method="POST" action="../php/registro.php">
-                    <input type="text" name="nameuser" id="usuario" placeholder="Nombre completo"
-                        autocomplete="name"><br><br>
-                    <input type="email" name="correoe" id="correoe" placeholder="Correo electrónico"><br><br>
-                    <input type="number" name="numerotelefonico" id="numerotelefonico"
-                        placeholder="Numero telefonico"><br><br>
-                    <input type="text" name="direccion" id="direccion" placeholder="Direccion completa"><br><br>
-                    <input type="text" name="apodo" id="apodo" placeholder="Apodo"><br><br>
-                    <input type="password" name="pass1" id="pass1" placeholder="Contraseña"><br><br>
-                    <!-- <input type="password" name="pass2" id="pass2" placeholder="Confirmar contraseña"><br><br> -->
+                        <div class="aceptar">
+                            <p><input type="checkbox" name="acepta" id="acepta"> Acepta nuestros <a>terminos</a> y
+                                <a>condiciones</a>
+                            </p><br>
 
-                    <div class="aceptar">
-                        <p><input type="checkbox" name="acepta" id="acepta"> Acepta nuestros <a>terminos</a> y
-                            <a>condiciones</a>
-                        </p><br>
+                        </div>
+                        <button type="submit" class="btn btn-warning">Registrarse</button>
+                    </form>
+                </div>
+                <div class="col-sm-12 col-md-6 align-self-center">
+                    <br>
+                    <h1>¿Ya tienes cuenta?</h1>
+                    <p>Inicia sesión para que puedas acceder a los mejores <br> productos y a los mejores precios de
+                        Ibcorp 😎 </p>
+                    <button class="btn btn-warning"><a href="../index.html">Iniciar sesión</a></button>
+
+                    <div class="row ">
+                        <img src="../src/img/registro.png" alt="imagen_venta">
 
                     </div>
-                    <button type="submit">Registrarse</button>
-                </form>
-            </div>
-            <div class="col-6">
-                <h1>¿Ya tienes cuenta?</h1>
-                <p>Inicia sesion para que puedas acceder a los mejores<br> productos y a los mejores precios de Ibcorp
-                    😎 </p>
-                <button class="btn btn-warning"><a href="../index.html">Iniciar sesion</a></button>
-
-                <div class="row">
-                    <img src="../src/img/registro.png" alt="imagen_venta">
-
                 </div>
             </div>
         </div>
