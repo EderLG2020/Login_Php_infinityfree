@@ -30,7 +30,8 @@
                         placeholder="Correo electrónico"><br><br>
                     <input type="text" name="direccion" id="direccion" placeholder="Direccion completa"><br><br>
                     <input type="text" name="name" id="name" placeholder="Nombre"><br><br>
-                    <input type="password" name="pass1" id="pass1" placeholder="Contraseña"><br><br>
+                    <input type="password" name="pass1" id="pass1" placeholder="Contraseña"
+                        autocomplete="country"><br><br>
                     <input type="password" name="pass2" id="pass2" placeholder="Confirmar contraseña"><br><br>
 
                     <div class="aceptar">
@@ -68,4 +69,30 @@ error_reporting(0);
   $Bs -> set_charset("utf8");
   $Inser = "INSERT INTO contacto(nombre,apellido,correo,telefono,asunto,mensaje) VALUES('$nombre', '$apellido','$correo','$telefono','$asunto','$mensaje')";
   mysqli_query($Bs,$Inser);
+?>
+
+
+$dbhost = "sql208.epizy.com";
+$dbuser = "epiz_27286277";
+$dbpass = "lyIpa5rBea";
+$dbname = "epiz_27286277_usuario";
+$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+if (!$conn)
+{
+die("No hay conexión: ".mysqli_connect_error());
+}
+$nombre = $_POST["user"];
+$pass = $_POST["contra"];
+$query = mysqli_query($conn,"SELECT * FROM usuario WHERE nombre= '".$nombre."' and contrasenia = '".$pass."'");
+$nr = mysqli_num_rows($query);
+if($nr == 1)
+{
+echo "
+<script>alert('Bienvenido') </script>";
+}
+else if ($nr == 0)
+{
+echo "
+<script>alert('No tiene acceso') </script>";
+}
 ?>

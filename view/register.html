@@ -10,7 +10,7 @@
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Registro</title>
 </head>
 
 <body>
@@ -18,15 +18,15 @@
     <div class="container">
         <div class="row">
             <div class="col-6 fondo-abstracto">
-            <h2>Registrate</h2>
-                <form action="#">
-                <input type="text" name="usuario" id="usuario" placeholder="Nombre completo"
-                        autocomplete="email"><br><br>
-                    <input type="email" name="correo" id="correo" placeholder="Correo electrónico"><br><br>
+                <h2>Registrate</h2>
+                <form name="formularioR" method="POST" action="../php/registro.php">
+                    <input type="text" name="nameuser" id="usuario" placeholder="Nombre completo"
+                        autocomplete="name"><br><br>
+                    <input type="email" name="correoe" id="correoe" placeholder="Correo electrónico"><br><br>
                     <input type="number" name="numerotelefonico" id="numerotelefonico"
                         placeholder="Numero telefonico"><br><br>
                     <input type="text" name="direccion" id="direccion" placeholder="Direccion completa"><br><br>
-                    <input type="text" name="name" id="name" placeholder="Nombre"><br><br>
+                    <input type="text" name="apodo" id="apodo" placeholder="Apodo"><br><br>
                     <input type="password" name="pass1" id="pass1" placeholder="Contraseña"><br><br>
                     <!-- <input type="password" name="pass2" id="pass2" placeholder="Confirmar contraseña"><br><br> -->
 
@@ -40,9 +40,10 @@
                 </form>
             </div>
             <div class="col-6">
-            <h1>¿Ya tienes cuenta?</h1>
-                <p>Inicia sesion para que puedas acceder a los mejores<br> productos y a los mejores precios de Ibcorp 😎 </p>
-                <button  class="btn btn-warning"><a href="../index.php">Iniciar sesion</a></button>
+                <h1>¿Ya tienes cuenta?</h1>
+                <p>Inicia sesion para que puedas acceder a los mejores<br> productos y a los mejores precios de Ibcorp
+                    😎 </p>
+                <button class="btn btn-warning"><a href="../index.html">Iniciar sesion</a></button>
 
                 <div class="row">
                     <img src="../src/img/registro.png" alt="imagen_venta">
@@ -62,4 +63,3 @@
 </body>
 
 </html>
-
